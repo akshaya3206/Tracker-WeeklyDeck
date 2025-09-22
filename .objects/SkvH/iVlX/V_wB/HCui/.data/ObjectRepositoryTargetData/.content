@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="9f5m8TIlHEK27SyR7l3Vig" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amedeloitte.sharepoint.com/sites/CHRISTUSHealthPodEngagement/Shared%20Documents/Forms/AllItems.aspx" CVScreenId="f706a5e3-e264-45bf-af60-64092aa94d1b" CvElementArea="1521, 903, 139, 52" CvTextArea="1539, 920, 102, 25" CvTextArgument="Copy here" CvType="Button" DesignTimeRectangle="1523, 905, 135, 48" ElementType="Button" FullSelectorArgument="&lt;webctrl parentid='ModalFocusTrapZone194' tag='IFRAME' /&gt;&lt;webctrl aria-label='Copy here' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ModalFocusTrapZone194' tag='IFRAME' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' /&gt;&lt;webctrl aria-label='Copy here' tag='BUTTON' type='button' class='ms-Button ms-Button--primary commandButton_b02cc8f2 root-142' aaname='Copy here' matching:aria-label='fuzzy' fuzzylevel:aria-label='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Copy here' /&gt;" Guid="4edd4322-87c7-4f8e-bd61-84312b1fbba8" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='{}' title='CHRISTUS Health Pod Engagement - Status Reports - All Documents' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="df4169d5647df806e1a873cfd8721b30.png" xmlns="">0VIDK_CNMz06n4k8pSb4m6A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

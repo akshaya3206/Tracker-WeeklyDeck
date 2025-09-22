@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="sQGQJcNs-UCZyYvzN0ByQQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amedeloitte.sharepoint.com/sites/CHRISTUSHealthPodEngagement/Shared%20Documents/Forms/AllItems.aspx" CVScreenId="1fbab41c-1c7e-461a-9f36-f8fd7570b88d" DesignTimeRectangle="573, 448, 252, 54" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;button&amp;gt;div' parentid='command-bar-menu-id' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='command-bar-menu-id' tag='DIV' class='ms-ContextualMenu-linkContent linkContent-202' aaname='' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='&amp;#xA;Files' /&gt;" Guid="2df813c3-d315-4961-82d5-92082c495872" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='{}' title='CHRISTUS Health Pod Engagement - Documents - Status Reports - All Documents' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="06c883f022d83138ddd6ce75b70ce6db.png" xmlns="">0cqVdgMWDu0u6gXcOlUTHKQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

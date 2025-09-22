@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="eWcqDjlJXEuI5MICmRQUZg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="a1a77500-e798-4d23-8752-413abecca008" CvTextArea="909, 350, 239, 28" CvTextArgument="Project Management" CvType="Text" DesignTimeRectangle="903, 342, 251, 40" ElementType="Button" FullSelectorArgument="&lt;wnd cls='Chrome_WidgetWin_1' title='Chat | General | Microsoft Teams' /&gt;&lt;ctrl name='Chat | General | Microsoft Teams' role='document' /&gt;&lt;ctrl name='Files' role='document' /&gt;&lt;ctrl name='CHRISTUS Health Pod Engagement - Status Reports - All Documents' role='document' /&gt;&lt;ctrl name='Project Management' role='push button' /&gt;" Guid="35982b9b-c5d8-4d6c-9d86-a58ce0495cc7" ScopeSelectorArgument="&lt;wnd app='ms-teams.exe' appid='MSTeams_8wekyb3d8bbwe!MSTeams' title='Chat | General | Microsoft Teams' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="c35d654631339366a524ecb4383d55d3.png" xmlns="">0Z10mdCoCFkGn3CXWX6FANg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

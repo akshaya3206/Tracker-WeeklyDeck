@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="8qFFDCz-5U2eIx2xqb0bRA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amedeloitte.sharepoint.com/sites/CHRISTUSHealthPodEngagement/Shared%20Documents/Forms/AllItems.aspx" CVScreenId="58e3887e-852e-4d16-83d5-b662be687d65" CvTextArea="614, 407, 67, 24" CvTextArgument="Upload" CvType="Text" DesignTimeRectangle="573, 391, 145, 48" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;button&amp;gt;span' idx='2' parentid='appRoot' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='container_cb8e3e55' parentid='appRoot' tag='SPAN' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Upload' /&gt;" Guid="4148e20f-9721-4fb7-ac76-0c9feb783d1a" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='{}' title='CHRISTUS Health Pod Engagement - Documents - Status Reports - All Documents' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="7867fd7ecf4e8cf8037995cb9dfa7872.png" xmlns="">0JfVoSaRR1Ei5AiCzzbU0Sg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

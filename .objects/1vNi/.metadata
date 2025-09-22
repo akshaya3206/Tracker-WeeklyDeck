@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chat  General  Microsoft Teams",
+  "Type": "App",
+  "Id": "1vNiMnrYiUe6C8nRTH7COg",
+  "Reference": "ts1sichYy0yK75hcmFfM1w/1vNiMnrYiUe6C8nRTH7COg",
+  "Created": "2025-09-18T17:53:58.9180559Z",
+  "Updated": "2025-09-18T17:53:58.9180559Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.13.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

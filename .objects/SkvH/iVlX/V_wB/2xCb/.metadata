@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Copy to",
+  "Type": "Element",
+  "Id": "2xCbCHCQVkayz2QVR--K3g",
+  "Reference": "ts1sichYy0yK75hcmFfM1w/2xCbCHCQVkayz2QVR--K3g",
+  "ParentRef": "ts1sichYy0yK75hcmFfM1w/V_wBGqUp7Uqaz_OaYMRmPg",
+  "Created": "2025-09-21T08:35:23.5946234Z",
+  "Updated": "2025-09-21T08:35:23.5946234Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.13.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

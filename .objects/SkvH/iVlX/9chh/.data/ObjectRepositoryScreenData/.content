@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="Qrsnj1zdE0al5Ad5BgbcIA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-11, -11, 1942, 1030" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAEUSURBVDhPY0AHzDkFBkC8H4j/I2EQ3wCqBDcAKQLi91BN6Bgkjt8QoIL7SBqw4ftQpQjA3Nz+Hoj/48VNbciGOEC1QgBWDVgwo6UNYQMmnjz9Hxkgy/F4+f6Xmr0Qhu8DcQCGASAAMgTETtq0BS4Owry+AcgGwHAAigEXXrwEG7Lw4qX/ypOnEWPAfRQDhLv7/zcePPz//fcfYAziEzDgP4oBIGfDDAEBo1nzSDMAZCsMHHjwEC4OwqKRcdgMQPUCPiydnPFffvEqdAPAgUgwIbE2toINUFy2FqYREY3oAKjQAaQYHWtOnfPf/NgF1ESEDQAVCQDxfSAGaUDGIDEBqDL8AKjQAIjPQzWCMIiNJScyMAAAIGu1wTJAuKMAAAAASUVORK5CYII=" Selector="&lt;html app='msedge.exe' htmlwindowname='{}' title='CHRISTUS Health Pod Engagement - Documents - Status Reports - All Documents' /&gt;" Url="https://amedeloitte.sharepoint.com/sites/CHRISTUSHealthPodEngagement/Shared%20Documents/Forms/AllItems.aspx?csf=1&amp;web=1&amp;e=Wk9Zcb&amp;CID=7c824cbf%2D2659%2D4e51%2Da689%2D62d2223ed7cc&amp;FolderCTID=0x01200000178295F94B7E44A548DE495166EE15&amp;id=%2Fsites%2FCHRISTUSHealthPodEngagement%2FShared%20Documents%2FGeneral%2FProject%20Management%2FStatus%20Reports" Version="V2">
+      <imageRef attrName="InformativeScreenshot" originalValue="d9350b9cf07d385f8305bb3b172e49b2.jpg" xmlns="">0u9pl2qE4dEaOwga527a4Tg</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

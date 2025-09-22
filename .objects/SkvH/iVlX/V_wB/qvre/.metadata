@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Work Packet Dashboards(1)",
+  "Type": "Element",
+  "Id": "qvreBQumBkKD6pMr-l8s7Q",
+  "Reference": "ts1sichYy0yK75hcmFfM1w/qvreBQumBkKD6pMr-l8s7Q",
+  "ParentRef": "ts1sichYy0yK75hcmFfM1w/V_wBGqUp7Uqaz_OaYMRmPg",
+  "Created": "2025-09-21T08:31:20.2132622Z",
+  "Updated": "2025-09-21T08:31:20.2132622Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.13.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

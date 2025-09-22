@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Copy here",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "HCuiO0ZP7UCZyYqYD1FUnA",
+  "Reference": "ts1sichYy0yK75hcmFfM1w/HCuiO0ZP7UCZyYqYD1FUnA",
+  "ParentRef": "ts1sichYy0yK75hcmFfM1w/V_wBGqUp7Uqaz_OaYMRmPg",
+  "Created": "2025-09-21T08:41:50.943705Z",
+  "Updated": "2025-09-21T08:41:50.943705Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.13.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

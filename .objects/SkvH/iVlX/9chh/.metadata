@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge CHRISTUS Health Pod Engagement - Documen(1)",
+  "Type": "Screen",
+  "Id": "9chhqz8YrUih0ovTGoMLNQ",
+  "Reference": "ts1sichYy0yK75hcmFfM1w/9chhqz8YrUih0ovTGoMLNQ",
+  "ParentRef": "ts1sichYy0yK75hcmFfM1w/iVlXRRU8DU-ZWYxS7cra4A",
+  "Created": "2025-09-22T03:23:21.3210003Z",
+  "Updated": "2025-09-22T03:23:21.3210003Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.13.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

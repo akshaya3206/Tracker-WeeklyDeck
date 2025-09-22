@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chat  General  Microsoft Teams",
+  "Type": "Screen",
+  "Id": "ltY05DTp6EutIHXAafObKQ",
+  "Reference": "ts1sichYy0yK75hcmFfM1w/ltY05DTp6EutIHXAafObKQ",
+  "ParentRef": "ts1sichYy0yK75hcmFfM1w/ZBpyo-VudE2ZbYh09En6gQ",
+  "Created": "2025-09-18T17:53:58.9699065Z",
+  "Updated": "2025-09-18T17:53:58.9699065Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.13.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

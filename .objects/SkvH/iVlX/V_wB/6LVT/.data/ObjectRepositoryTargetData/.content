@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Pml9MWE_6UyDYlk13t3jQg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amedeloitte.sharepoint.com/sites/CHRISTUSHealthPodEngagement/Shared%20Documents/Forms/AllItems.aspx" CVScreenId="c40efbd3-6773-47fe-b967-d228fcba279f" CvTextArea="576, 330, 375, 21" CvTextArgument="New Pod Archived Status Reports*" CvType="Text" DesignTimeRectangle="578, 327, 375, 29" ElementType="Button" FullSelectorArgument="&lt;webctrl parentid='ModalFocusTrapZone194' tag='IFRAME' /&gt;&lt;webctrl aria-role='link' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ModalFocusTrapZone194' tag='IFRAME' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' /&gt;&lt;webctrl aria-role='link' tag='BUTTON' type='button' class='ms-Link root_0308a9d1 nameField_3ac9d9bb clickable_3ac9d9bb overflow_1ce64d81 pre_1ce64d81' aaname='New Pod Archived Status Reports from 11_12_2024' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='New Pod Archived Status Reports *' /&gt;" Guid="256ed9bf-fe59-4d50-b1ef-9f1271508952" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='{}' title='CHRISTUS Health Pod Engagement - Status Reports - All Documents' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="36f85d32d01ff9c3c777a3d2fc549603.png" xmlns="">0_I1i9aU58kOiK0QWClay_w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

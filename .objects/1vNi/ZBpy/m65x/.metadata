@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chat  Kumar, Akshaya (You)  Microsoft Teams",
+  "Type": "Screen",
+  "Id": "m65xkbnIoE6LHcmp_3Uh6g",
+  "Reference": "ts1sichYy0yK75hcmFfM1w/m65xkbnIoE6LHcmp_3Uh6g",
+  "ParentRef": "ts1sichYy0yK75hcmFfM1w/ZBpyo-VudE2ZbYh09En6gQ",
+  "Created": "2025-09-18T18:02:42.9848625Z",
+  "Updated": "2025-09-18T18:02:42.9848625Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.13.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

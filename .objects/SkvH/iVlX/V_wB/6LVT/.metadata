@@ -1,0 +1,14 @@
+﻿{
+  "Name": "New Pod Archived Status…",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "6LVTLfDpO0GXioL7JdeB4w",
+  "Reference": "ts1sichYy0yK75hcmFfM1w/6LVTLfDpO0GXioL7JdeB4w",
+  "ParentRef": "ts1sichYy0yK75hcmFfM1w/V_wBGqUp7Uqaz_OaYMRmPg",
+  "Created": "2025-09-21T08:40:43.2469775Z",
+  "Updated": "2025-09-21T08:40:43.2469775Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.13.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
