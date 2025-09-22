@@ -516,7 +516,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:PowerPointApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" AutoSave="False" DisplayName="Use PowerPoint Presentation" sap:VirtualizedContainerService.HintSize="545.3333333333334,1300.6666666666667" sap2010:WorkflowViewState.IdRef="PowerPointApplicationScope_2" PresentationPath="WeeklyDeck_Template.pptx" SensitivityOperation="None">
+    <ui:PowerPointApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" AutoSave="False" DisplayName="Use PowerPoint Presentation (Update and Save ppt)" sap:VirtualizedContainerService.HintSize="545.3333333333334,1300.6666666666667" sap2010:WorkflowViewState.IdRef="PowerPointApplicationScope_2" PresentationPath="WeeklyDeck_Template.pptx" SensitivityOperation="None">
       <ui:PowerPointApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:IPresentationQuickHandle">
           <ActivityAction.Argument>
@@ -528,7 +528,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:FindAndReplaceTextInPresentation NumberOfReplacements="{x:Null}" DisplayName="Replace Text in Presentation" sap:VirtualizedContainerService.HintSize="477.3333333333333,246" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextInPresentation_4" MatchCase="False" Presentation="[PowerPoint]" ReplaceAll="True" ReplaceWith="[fancyDate]" SearchFor="fancyDate" WholeWordsOnly="False" />
+            <ui:FindAndReplaceTextInPresentation NumberOfReplacements="{x:Null}" DisplayName="Replace Text in Presentation " sap:VirtualizedContainerService.HintSize="477.3333333333333,246" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextInPresentation_4" MatchCase="False" Presentation="[PowerPoint]" ReplaceAll="True" ReplaceWith="[fancyDate]" SearchFor="fancyDate" WholeWordsOnly="False" />
             <ui:FindAndReplaceTextInPresentation NumberOfReplacements="{x:Null}" DisplayName="Replace Text in Presentation" sap:VirtualizedContainerService.HintSize="477.3333333333333,246" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextInPresentation_5" MatchCase="False" Presentation="[PowerPoint]" ReplaceAll="True" ReplaceWith="[shortDate]" SearchFor="shortDate" WholeWordsOnly="False" />
             <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="477.3333333333333,210.66666666666666" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
               <ui:MultipleAssign.AssignOperations>
@@ -565,8 +565,8 @@
         </ActivityAction>
       </ui:PowerPointApplicationScope.Body>
     </ui:PowerPointApplicationScope>
-    <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="C:\Users\akshayakumar\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Project Management\Status Reports" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="545.3333333333334,224.66666666666666" sap2010:WorkflowViewState.IdRef="CopyFile_1" Path="[newfilePath]" />
-    <umab:OutlookApplicationCard Account="{x:Null}" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="545.3333333333334,704" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_2">
+    <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="C:\Users\akshayakumar\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Project Management\Status Reports" DisplayName="Copy File to Status Report Folder" sap:VirtualizedContainerService.HintSize="545.3333333333334,224.66666666666666" sap2010:WorkflowViewState.IdRef="CopyFile_1" Path="[newfilePath]" />
+    <umab:OutlookApplicationCard Account="{x:Null}" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App (Send Email to Update the PPT)" sap:VirtualizedContainerService.HintSize="545.3333333333334,704" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_2">
       <umab:OutlookApplicationCard.Body>
         <ActivityAction x:TypeArguments="um:IMailQuickHandle">
           <ActivityAction.Argument>
@@ -599,6 +599,6 @@
         </ActivityAction>
       </umab:OutlookApplicationCard.Body>
     </umab:OutlookApplicationCard>
-    <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="C:\Users\akshayakumar\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Project Management\Status Reports\New Pod Archived Status Reports from 11_12_2024" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="545.3333333333334,187.33333333333334" sap2010:WorkflowViewState.IdRef="MoveFile_3" Path="[&quot;C:\Users\akshayakumar\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Project Management\Status Reports\Weekly CHRISTUS Health_Deloitte Build Team Status Report_&quot;+lastFridayStr+&quot;.pptx&quot;]" />
+    <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="C:\Users\akshayakumar\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Project Management\Status Reports\New Pod Archived Status Reports from 11_12_2024" DisplayName="Move File (Previous Week PPT to Archive)" sap:VirtualizedContainerService.HintSize="545.3333333333334,187.33333333333334" sap2010:WorkflowViewState.IdRef="MoveFile_3" Path="[&quot;C:\Users\akshayakumar\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Project Management\Status Reports\Weekly CHRISTUS Health_Deloitte Build Team Status Report_&quot;+lastFridayStr+&quot;.pptx&quot;]" />
   </Sequence>
 </Activity>
