@@ -143,7 +143,7 @@
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WeeklyDeckUpdate" sap:VirtualizedContainerService.HintSize="1216.6666666666665,3203.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="WeeklyDeckUpdate" sap:VirtualizedContainerService.HintSize="942.6666666666666,3352.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="lastFriday" />
       <Variable x:TypeArguments="x:String" Name="mailFile" />
@@ -157,13 +157,14 @@
       <Variable x:TypeArguments="s:DateTime" Name="currentFriday" />
       <Variable x:TypeArguments="s:DateTime" Name="today" />
       <Variable x:TypeArguments="x:String" Name="lastFridayStr" />
+      <Variable x:TypeArguments="s:DateTime" Name="thisFri" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Assign and Calculate Date" sap:VirtualizedContainerService.HintSize="545.3333333333334,706.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <Sequence DisplayName="Assign and Calculate Date" sap:VirtualizedContainerService.HintSize="545.3333333333334,737.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -340,7 +341,7 @@
           </Sequence>
         </ui:IfElseIfV2.Then>
       </ui:IfElseIfV2>
-      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="477.3333333333333,262.6666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="477.3333333333333,293.3333333333333" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
@@ -367,12 +368,20 @@
                 <InArgument x:TypeArguments="x:String">[currentFriday.Tostring("yyyyMMdd")]</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="s:DateTime">[thisFri]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="s:DateTime">[DateTime.Today.AddDays(5 - CInt(DateTime.Today.DayOfWeek))]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
               <ui:AssignOperation.To>
                 <OutArgument x:TypeArguments="s:DateTime">[lastFriday]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="s:DateTime">[DateTime.Today.AddDays(-(((CInt(DateTime.Today.dayofWeek)-5+7)Mod 7)+7))]</InArgument>
+                <InArgument x:TypeArguments="s:DateTime">[thisFri.AddDays(-7)]</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
@@ -387,6 +396,7 @@
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
     </Sequence>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="545.3333333333334,118.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[lastFridayStr]" />
     <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="545.3333333333334,57.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_4">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="518,1502" sap2010:WorkflowViewState.IdRef="Sequence_23">
@@ -529,7 +539,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:FindAndReplaceTextInPresentation NumberOfReplacements="{x:Null}" DisplayName="Replace Text in Presentation " sap:VirtualizedContainerService.HintSize="477.3333333333333,246" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextInPresentation_4" MatchCase="False" Presentation="[PowerPoint]" ReplaceAll="True" ReplaceWith="[fancyDate]" SearchFor="fancyDate" WholeWordsOnly="False" />
-            <ui:FindAndReplaceTextInPresentation NumberOfReplacements="{x:Null}" DisplayName="Replace Text in Presentation" sap:VirtualizedContainerService.HintSize="477.3333333333333,246" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextInPresentation_5" MatchCase="False" Presentation="[PowerPoint]" ReplaceAll="True" ReplaceWith="[shortDate]" SearchFor="shortDate" WholeWordsOnly="False" />
+            <ui:FindAndReplaceTextInPresentation NumberOfReplacements="{x:Null}" DisplayName="Replace Text in Presentation" sap:VirtualizedContainerService.HintSize="477.3333333333333,246" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextInPresentation_5" MatchCase="False" Presentation="[PowerPoint]" ReplaceAll="True" ReplaceWith="[shortDate]" SearchFor="shortDate" WholeWordsOnly="True" />
             <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="477.3333333333333,210.66666666666666" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
@@ -578,7 +588,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Outlook]" BodyDocumentPath="C:\Users\akshayakumar\Documents\Hi this is a test mail.docx" DisplayName="Send Email " sap:VirtualizedContainerService.HintSize="434,424" sap2010:WorkflowViewState.IdRef="SendMailX_2" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[&quot;Weekly Status Report Update: &quot;+currentFriday.ToString(&quot;dd-MMM-yyyy&quot;)]" To="akshayakumar@deloitte.com" UseDocumentAsBody="False">
+            <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Outlook]" BodyDocumentPath="C:\Users\akshayakumar\Documents\Hi this is a test mail.docx" Cc="bbillhartz@deloitte.com; rispatil@deloitte.com; tdebmallik@deloitte.com; ankitaroy2@deloitte.com; nitishkumar44@deloitte.com" DisplayName="Send Email " sap:VirtualizedContainerService.HintSize="434,424" sap2010:WorkflowViewState.IdRef="SendMailX_2" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[&quot;Weekly Status Report Update: &quot;+currentFriday.ToString(&quot;dd-MMM-yyyy&quot;)]" To="pbraj@deloitte.com; vbalasodongale@deloitte.com; jbelel@deloitte.com; srug@deloitte.com; tgupta10@deloitte.com; lakaur@deloitte.com; akshayakumar@deloitte.com; mpavkumar@deloitte.com; bharkumari@deloitte.com; rmbabu@deloitte.com; divmaheshwari@deloitte.com; hamalpani@deloitte.com; apriyankapravalli@deloitte.com; frai@deloitte.com; drajitha@deloitte.com; pragrawat@deloitte.com; anussaha@deloitte.com; susujitha@deloitte.com; amisshaw@deloitte.com; dwaikar@deloitte.com; abalagopalan@deloitte.com; stanuja@deloitte.com; gigollapudi@deloitte.com; jpaul4@deloitte.com; sanjasinghal@deloitte.com" UseDocumentAsBody="False">
               <umab:SendMailX.Files>
                 <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
               </umab:SendMailX.Files>

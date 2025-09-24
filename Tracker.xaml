@@ -129,9 +129,10 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>NPOI.Core</AssemblyReference>
       <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Tracker" sap:VirtualizedContainerService.HintSize="1216.6666666666665,1050.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Tracker" sap:VirtualizedContainerService.HintSize="942.6666666666666,1050.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="nextMondaystr" />
       <Variable x:TypeArguments="x:String" Name="account" />
@@ -207,36 +208,36 @@
               <OutArgument x:TypeArguments="x:String">[subject]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">["Request to update the tracker for week ending:" + thisFriday.ToString("dd-MMM-yyyy")]</InArgument>
+              <InArgument x:TypeArguments="x:String">["Request to update the tracker for week ending: " + thisFriday.ToString("dd-MMM-yyyy")]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <umab:OutlookApplicationCard Account="{x:Null}" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App (Send Mail to Update the Tracker)" sap:VirtualizedContainerService.HintSize="502,694.6666666666666" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
+    <umab:OutlookApplicationCard Account="{x:Null}" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="502,694.6666666666666" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_2">
       <umab:OutlookApplicationCard.Body>
         <ActivityAction x:TypeArguments="um:IMailQuickHandle">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,484" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,484" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Outlook]" BodyDocumentPath="C:\Users\akshayakumar\Documents\Hi this is a test mail.docx" DisplayName="Send Email " sap:VirtualizedContainerService.HintSize="434,424" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[subject]" To="akshayakumar@deloitte.com" UseDocumentAsBody="False">
+            <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Outlook]" Cc="bbillhartz@deloitte.com; rispatil@deloitte.com; tdebmallik@deloitte.com; ankitaroy2@deloitte.com; nitishkumar44@deloitte.com" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,424" sap2010:WorkflowViewState.IdRef="SendMailX_2" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[subject]" To="pbraj@deloitte.com; vbalasodongale@deloitte.com; jbelel@deloitte.com; srug@deloitte.com; tgupta10@deloitte.com; lakaur@deloitte.com; akshayakumar@deloitte.com; mpavkumar@deloitte.com; bharkumari@deloitte.com; rmbabu@deloitte.com; divmaheshwari@deloitte.com; hamalpani@deloitte.com; apriyankapravalli@deloitte.com; frai@deloitte.com; drajitha@deloitte.com; pragrawat@deloitte.com; anussaha@deloitte.com; susujitha@deloitte.com; amisshaw@deloitte.com; dwaikar@deloitte.com; abalagopalan@deloitte.com; stanuja@deloitte.com; gigollapudi@deloitte.com; jpaul4@deloitte.com; sanjasinghal@deloitte.com" UseDocumentAsBody="False">
               <umab:SendMailX.Files>
                 <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
               </umab:SendMailX.Files>
               <umab:SendMailX.HtmlBodyFromFile>
-                <umabh:HtmlContentArgument HtmlBody="{x:Null}" FilePath=".data/HtmlContent2.html">
+                <umabh:HtmlContentArgument HtmlBody="{x:Null}" FilePath=".data/HtmlContent3.html">
                   <umabh:HtmlContentArgument.RuntimeImages>
                     <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                   </umabh:HtmlContentArgument.RuntimeImages>
                   <umabh:HtmlContentArgument.ValueMappings>
                     <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="4">
-                      <umabh:HtmlTextValueMapping Name="MondayStr" Value="[nextMondaystr]" />
+                      <umabh:HtmlTextValueMapping Name="MondayStr" Value="[nextMondayStr]" />
                     </scg:List>
                   </umabh:HtmlContentArgument.ValueMappings>
                 </umabh:HtmlContentArgument>
