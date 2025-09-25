@@ -143,7 +143,7 @@
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WeeklyDeckUpdate" sap:VirtualizedContainerService.HintSize="942.6666666666666,3352.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="WeeklyDeckUpdate" sap:VirtualizedContainerService.HintSize="920.6666666666666,3352.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="lastFriday" />
       <Variable x:TypeArguments="x:String" Name="mailFile" />
