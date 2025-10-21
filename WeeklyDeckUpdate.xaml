@@ -1,4 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="WeeklyDeckUpdate" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="WeeklyDeckUpdate_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="WeeklyDeckUpdate" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="user" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>WeeklyDeckUpdate_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -143,7 +150,7 @@
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WeeklyDeckUpdate" sap:VirtualizedContainerService.HintSize="920.6666666666666,3352.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="WeeklyDeckUpdate" sap:VirtualizedContainerService.HintSize="1214.6666666666665,3234" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="lastFriday" />
       <Variable x:TypeArguments="x:String" Name="mailFile" />
@@ -396,7 +403,6 @@
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
     </Sequence>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="545.3333333333334,118.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[lastFridayStr]" />
     <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="545.3333333333334,57.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_4">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="518,1502" sap2010:WorkflowViewState.IdRef="Sequence_23">
@@ -575,7 +581,7 @@
         </ActivityAction>
       </ui:PowerPointApplicationScope.Body>
     </ui:PowerPointApplicationScope>
-    <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="C:\Users\akshayakumar\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Project Management\Status Reports" DisplayName="Copy File to Status Report Folder" sap:VirtualizedContainerService.HintSize="545.3333333333334,224.66666666666666" sap2010:WorkflowViewState.IdRef="CopyFile_1" Path="[newfilePath]" />
+    <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[&quot;C:\Users\&quot;+user+&quot;\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Project Management\Status Reports&quot;]" DisplayName="Copy File to Status Report Folder" sap:VirtualizedContainerService.HintSize="545.3333333333334,224.66666666666666" sap2010:WorkflowViewState.IdRef="CopyFile_1" Path="[newfilePath]" />
     <umab:OutlookApplicationCard Account="{x:Null}" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App (Send Email to Update the PPT)" sap:VirtualizedContainerService.HintSize="545.3333333333334,704" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_2">
       <umab:OutlookApplicationCard.Body>
         <ActivityAction x:TypeArguments="um:IMailQuickHandle">
@@ -609,6 +615,6 @@
         </ActivityAction>
       </umab:OutlookApplicationCard.Body>
     </umab:OutlookApplicationCard>
-    <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="C:\Users\akshayakumar\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Project Management\Status Reports\New Pod Archived Status Reports from 11_12_2024" DisplayName="Move File (Previous Week PPT to Archive)" sap:VirtualizedContainerService.HintSize="545.3333333333334,187.33333333333334" sap2010:WorkflowViewState.IdRef="MoveFile_3" Path="[&quot;C:\Users\akshayakumar\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Project Management\Status Reports\Weekly CHRISTUS Health_Deloitte Build Team Status Report_&quot;+lastFridayStr+&quot;.pptx&quot;]" />
+    <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[&quot;C:\Users\&quot;+user+&quot;\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Project Management\Status Reports\New Pod Archived Status Reports from 11_12_2024&quot;]" DisplayName="Move File (Previous Week PPT to Archive)" sap:VirtualizedContainerService.HintSize="545.3333333333334,187.33333333333334" sap2010:WorkflowViewState.IdRef="MoveFile_3" Path="[&quot;C:\Users\&quot;+user+&quot;\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Project Management\Status Reports\Weekly CHRISTUS Health_Deloitte Build Team Status Report_&quot;+lastFridayStr+&quot;.pptx&quot;]" />
   </Sequence>
 </Activity>

@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Edge Sidekick",
+  "Type": "App",
+  "Id": "PFenVhVAvkqE_coH4SGmlg",
+  "Reference": "ts1sichYy0yK75hcmFfM1w/PFenVhVAvkqE_coH4SGmlg",
+  "Created": "2025-10-20T17:21:45.1838366Z",
+  "Updated": "2025-10-20T17:21:45.1838366Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.13.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
