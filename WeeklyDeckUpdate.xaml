@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="WeeklyDeckUpdate" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="WeeklyDeckUpdate" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="user" Type="InArgument(x:String)" />
   </x:Members>
@@ -150,7 +150,7 @@
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WeeklyDeckUpdate" sap:VirtualizedContainerService.HintSize="1214.6666666666665,3234" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="WeeklyDeckUpdate" sap:VirtualizedContainerService.HintSize="1214.6666666666665,3176.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="lastFriday" />
       <Variable x:TypeArguments="x:String" Name="mailFile" />
@@ -403,135 +403,6 @@
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
     </Sequence>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="545.3333333333334,57.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_4">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="518,1502" sap2010:WorkflowViewState.IdRef="Sequence_23">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Sharepoint Move to Archive" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="484,1442" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" ScopeGuid="746355c9-731d-4cca-b4cd-6e17b5aba725" Version="V2">
-            <uix:NApplicationCard.Body>
-              <ActivityAction x:TypeArguments="x:Object">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1200" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uix:NHover DisplayName="Hover 'Work Packet Dashboards'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,229.33333333333334" HoverTime="3" sap2010:WorkflowViewState.IdRef="NHover_1" ScopeIdentifier="746355c9-731d-4cca-b4cd-6e17b5aba725" Version="V5">
-                    <uix:NHover.Target>
-                      <uix:TargetAnchorable BrowserURL="amedeloitte.sharepoint.com/sites/CHRISTUSHealthPodEngagement/Shared%20Documents/Forms/AllItems.aspx" CVScreenId="ab13dd72-e3b6-4950-a0e8-d44263ee7378" ContentHash="tk_pbZnDC0223mcX3AxUAA" CvTextArea="536, 735, 410, 24" CvTextArgument="Weekly CHRISTUS Health_Deloitte *" CvType="Text" DesignTimeRectangle="527, 713, 450, 70" FullSelectorArgument="&lt;webctrl aria-role='gridcell' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;cf-data-provider&amp;gt;cf-action-wrapper&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='13' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='gridcell' type='' class='odsp-spartan-cell field-LinkFilename-htmlGrid_1 hero_c5aceefe' tag='DIV' aaname='' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Weekly CHRISTUS Health_Deloitte Build Team Status Report*' /&gt;" Guid="daffe428-b359-46e6-b1b9-35edb873e9bd" InformativeScreenshot="d9e0e35a0c71ad358d620f5e1a19736f.png" Reference="ts1sichYy0yK75hcmFfM1w/sWbJgdgPmkukMOVkzoBgFw" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='{}' title='CHRISTUS Health Pod Engagement - Status Reports - All Documents' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target CVScreenId="ab13dd72-e3b6-4950-a0e8-d44263ee7378" CvTextArea="536, 665, 233, 21" CvTextArgument="Work Packet Dashboards" CvType="Text" DesignTimeRectangle="527, 642, 450, 71" FullSelectorArgument="&lt;webctrl aria-role='gridcell' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;cf-data-provider&amp;gt;cf-action-wrapper&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='8' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='gridcell' type='' class='odsp-spartan-cell field-LinkFilename-htmlGrid_1 hero_c5aceefe' tag='DIV' aaname='' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Work Packet Dashboards' /&gt;" Guid="a2d8ea53-3690-4d0b-ada9-8ed52dd416db" SearchSteps="Selector, FuzzySelector, CV" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NHover.Target>
-                    <uix:NHover.VerifyOptions>
-                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                        <uix:VerifyExecutionOptions.Retry>
-                          <InArgument x:TypeArguments="x:Boolean" />
-                        </uix:VerifyExecutionOptions.Retry>
-                        <uix:VerifyExecutionOptions.Timeout>
-                          <InArgument x:TypeArguments="x:Double" />
-                        </uix:VerifyExecutionOptions.Timeout>
-                      </uix:VerifyExecutionOptions>
-                    </uix:NHover.VerifyOptions>
-                  </uix:NHover>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Work Packet Dashboards'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Right" ScopeIdentifier="746355c9-731d-4cca-b4cd-6e17b5aba725" Version="V5">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="amedeloitte.sharepoint.com/sites/CHRISTUSHealthPodEngagement/Shared%20Documents/Forms/AllItems.aspx" CVScreenId="8b9f052c-ce3e-4ed9-b3e7-497db21ab2c4" ContentHash="AfX5KQccWUeGtonYKVekIQ" CvTextArea="536, 735, 410, 25" CvTextArgument="Weekly CHRISTUS Health_Deloitte Build *" CvType="Text" DesignTimeRectangle="527, 713, 450, 70" FullSelectorArgument="&lt;webctrl aria-role='gridcell' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;cf-data-provider&amp;gt;cf-action-wrapper&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='13' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='gridcell' type='' class='odsp-spartan-cell field-LinkFilename-htmlGrid_1 hero_c5aceefe' tag='DIV' aaname='' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Weekly CHRISTUS Health_Deloitte Build Team Status *' /&gt;" Guid="3ca1c227-2ace-423a-8815-873f2a526a1c" InformativeScreenshot="d9e0e35a0c71ad358d620f5e1a19736f.png" Reference="ts1sichYy0yK75hcmFfM1w/qvreBQumBkKD6pMr-l8s7Q" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='{}' title='CHRISTUS Health Pod Engagement - Status Reports - All Documents' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target CVScreenId="8b9f052c-ce3e-4ed9-b3e7-497db21ab2c4" CvTextArea="536, 665, 233, 21" CvTextArgument="Work Packet Dashboards" CvType="Text" DesignTimeRectangle="527, 642, 450, 71" FullSelectorArgument="&lt;webctrl aria-role='gridcell' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;cf-data-provider&amp;gt;cf-action-wrapper&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='8' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='gridcell' type='' class='odsp-spartan-cell field-LinkFilename-htmlGrid_1 hero_c5aceefe' tag='DIV' aaname='' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Work Packet Dashboards' /&gt;" Guid="97686484-9738-408d-9adb-a46baf8d82d6" SearchSteps="Selector, FuzzySelector, CV" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NClick.Target>
-                    <uix:NClick.VerifyOptions>
-                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                        <uix:VerifyExecutionOptions.Retry>
-                          <InArgument x:TypeArguments="x:Boolean" />
-                        </uix:VerifyExecutionOptions.Retry>
-                        <uix:VerifyExecutionOptions.Timeout>
-                          <InArgument x:TypeArguments="x:Double" />
-                        </uix:VerifyExecutionOptions.Timeout>
-                      </uix:VerifyExecutionOptions>
-                    </uix:NClick.VerifyOptions>
-                  </uix:NClick>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Copy to'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="746355c9-731d-4cca-b4cd-6e17b5aba725" Version="V5">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="amedeloitte.sharepoint.com/sites/CHRISTUSHealthPodEngagement/Shared%20Documents/Forms/AllItems.aspx" CVScreenId="dc79eeb6-78b5-4b2a-8e54-652062ce8e3c" ContentHash="ruRhNSEq6kyY1wfMfQhuqw" CvTextArea="1065, 929, 75, 22" CvTextArgument="Copy to" CvType="Text" DesignTimeRectangle="1025, 910, 252, 54" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;button&amp;gt;div' idx='13' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='ms-ContextualMenu-linkContent linkContent-205' tag='DIV' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='&amp;#xA;Copy to' /&gt;" Guid="8c8d7c38-d7e6-480e-8eb0-4b904f9e3859" InformativeScreenshot="7e58632c2fc9fee08255ac666e5f4bbf.png" Reference="ts1sichYy0yK75hcmFfM1w/2xCbCHCQVkayz2QVR--K3g" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='{}' title='CHRISTUS Health Pod Engagement - Status Reports - All Documents' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
-                    </uix:NClick.Target>
-                    <uix:NClick.VerifyOptions>
-                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                        <uix:VerifyExecutionOptions.Retry>
-                          <InArgument x:TypeArguments="x:Boolean" />
-                        </uix:VerifyExecutionOptions.Retry>
-                        <uix:VerifyExecutionOptions.Timeout>
-                          <InArgument x:TypeArguments="x:Double" />
-                        </uix:VerifyExecutionOptions.Timeout>
-                      </uix:VerifyExecutionOptions>
-                    </uix:NClick.VerifyOptions>
-                  </uix:NClick>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'New Pod Archived Status…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="746355c9-731d-4cca-b4cd-6e17b5aba725" Version="V5">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="amedeloitte.sharepoint.com/sites/CHRISTUSHealthPodEngagement/Shared%20Documents/Forms/AllItems.aspx" CVScreenId="c40efbd3-6773-47fe-b967-d228fcba279f" ContentHash="Pml9MWE_6UyDYlk13t3jQg" CvTextArea="576, 330, 375, 21" CvTextArgument="New Pod Archived Status Reports*" CvType="Text" DesignTimeRectangle="578, 327, 375, 29" ElementType="Button" FullSelectorArgument="&lt;webctrl parentid='ModalFocusTrapZone194' tag='IFRAME' /&gt;&lt;webctrl aria-role='link' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ModalFocusTrapZone194' tag='IFRAME' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' /&gt;&lt;webctrl aria-role='link' tag='BUTTON' type='button' class='ms-Link root_0308a9d1 nameField_3ac9d9bb clickable_3ac9d9bb overflow_1ce64d81 pre_1ce64d81' aaname='New Pod Archived Status Reports from 11_12_2024' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='New Pod Archived Status Reports *' /&gt;" Guid="256ed9bf-fe59-4d50-b1ef-9f1271508952" InformativeScreenshot="36f85d32d01ff9c3c777a3d2fc549603.png" Reference="ts1sichYy0yK75hcmFfM1w/6LVTLfDpO0GXioL7JdeB4w" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='{}' title='CHRISTUS Health Pod Engagement - Status Reports - All Documents' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
-                    </uix:NClick.Target>
-                    <uix:NClick.VerifyOptions>
-                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                        <uix:VerifyExecutionOptions.Retry>
-                          <InArgument x:TypeArguments="x:Boolean" />
-                        </uix:VerifyExecutionOptions.Retry>
-                        <uix:VerifyExecutionOptions.Timeout>
-                          <InArgument x:TypeArguments="x:Double" />
-                        </uix:VerifyExecutionOptions.Timeout>
-                      </uix:VerifyExecutionOptions>
-                    </uix:NClick.VerifyOptions>
-                  </uix:NClick>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Copy here'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,222.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="746355c9-731d-4cca-b4cd-6e17b5aba725" Version="V5">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="amedeloitte.sharepoint.com/sites/CHRISTUSHealthPodEngagement/Shared%20Documents/Forms/AllItems.aspx" CVScreenId="f706a5e3-e264-45bf-af60-64092aa94d1b" ContentHash="9f5m8TIlHEK27SyR7l3Vig" CvElementArea="1521, 903, 139, 52" CvTextArea="1539, 920, 102, 25" CvTextArgument="Copy here" CvType="Button" DesignTimeRectangle="1523, 905, 135, 48" ElementType="Button" FullSelectorArgument="&lt;webctrl parentid='ModalFocusTrapZone194' tag='IFRAME' /&gt;&lt;webctrl aria-label='Copy here' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ModalFocusTrapZone194' tag='IFRAME' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' /&gt;&lt;webctrl aria-label='Copy here' tag='BUTTON' type='button' class='ms-Button ms-Button--primary commandButton_b02cc8f2 root-142' aaname='Copy here' matching:aria-label='fuzzy' fuzzylevel:aria-label='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Copy here' /&gt;" Guid="4edd4322-87c7-4f8e-bd61-84312b1fbba8" InformativeScreenshot="df4169d5647df806e1a873cfd8721b30.png" Reference="ts1sichYy0yK75hcmFfM1w/HCuiO0ZP7UCZyYqYD1FUnA" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='{}' title='CHRISTUS Health Pod Engagement - Status Reports - All Documents' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
-                    </uix:NClick.Target>
-                    <uix:NClick.VerifyOptions>
-                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                        <uix:VerifyExecutionOptions.Retry>
-                          <InArgument x:TypeArguments="x:Boolean" />
-                        </uix:VerifyExecutionOptions.Retry>
-                        <uix:VerifyExecutionOptions.Timeout>
-                          <InArgument x:TypeArguments="x:Double" />
-                        </uix:VerifyExecutionOptions.Timeout>
-                      </uix:VerifyExecutionOptions>
-                    </uix:NClick.VerifyOptions>
-                  </uix:NClick>
-                </Sequence>
-              </ActivityAction>
-            </uix:NApplicationCard.Body>
-            <uix:NApplicationCard.TargetApp>
-              <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Edge" ContentHash="vZODWNZfwEikxazCRPQtDA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAEUSURBVDhPY0AHzDkFBkC8H4j/I2EQ3wCqBDcAKQLi91BN6Bgkjt8QoIL7SBqw4ftQpQjA3Nz+Hoj/48VNbciGOEC1QgBWDVgwo6UNYQMmnjz9Hxkgy/F4+f6Xmr0Qhu8DcQCGASAAMgTETtq0BS4Owry+AcgGwHAAigEXXrwEG7Lw4qX/ypOnEWPAfRQDhLv7/zcePPz//fcfYAziEzDgP4oBIGfDDAEBo1nzSDMAZCsMHHjwEC4OwqKRcdgMQPUCPiydnPFffvEqdAPAgUgwIbE2toINUFy2FqYREY3oAKjQAaQYHWtOnfPf/NgF1ESEDQAVCQDxfSAGaUDGIDEBqDL8AKjQAIjPQzWCMIiNJScyMAAAIGu1wTJAuKMAAAAASUVORK5CYII=" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="acff0a9a418458d6f0f44c47ceaf6589.jpg" Reference="ts1sichYy0yK75hcmFfM1w/V_wBGqUp7Uqaz_OaYMRmPg" Selector="&lt;html app='msedge.exe' htmlwindowname='{}' title='CHRISTUS Health Pod Engagement - Documents - Status Reports - All Documents' /&gt;" Url="https://amedeloitte.sharepoint.com/sites/CHRISTUSHealthPodEngagement/Shared%20Documents/Forms/AllItems.aspx?csf=1&amp;web=1&amp;e=Wk9Zcb&amp;CID=7c824cbf%2D2659%2D4e51%2Da689%2D62d2223ed7cc&amp;FolderCTID=0x01200000178295F94B7E44A548DE495166EE15&amp;id=%2Fsites%2FCHRISTUSHealthPodEngagement%2FShared%20Documents%2FGeneral%2FProject%20Management%2FStatus%20Reports" Version="V2" />
-            </uix:NApplicationCard.TargetApp>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </uix:NApplicationCard>
-        </Sequence>
-      </ui:CommentOut.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:CommentOut>
     <ui:PowerPointApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" AutoSave="False" DisplayName="Use PowerPoint Presentation (Update and Save ppt)" sap:VirtualizedContainerService.HintSize="545.3333333333334,1300.6666666666667" sap2010:WorkflowViewState.IdRef="PowerPointApplicationScope_2" PresentationPath="WeeklyDeck_Template.pptx" SensitivityOperation="None">
       <ui:PowerPointApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:IPresentationQuickHandle">
