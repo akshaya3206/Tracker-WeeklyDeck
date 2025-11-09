@@ -1,5 +1,7 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="MonthlyDeck" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
+    <x:Property Name="CcEmails" Type="InArgument(x:String)" />
+    <x:Property Name="ToEmails" Type="InArgument(x:String)" />
     <x:Property Name="user" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
@@ -402,7 +404,7 @@
             </scg:List>
           </ui:MultipleAssign.AssignOperations>
         </ui:MultipleAssign>
-        <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="506,633.3333333333334" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+        <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[counter &lt; 10]" DisplayName="While" sap:VirtualizedContainerService.HintSize="506,633.3333333333334" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
           <ui:InterruptibleWhile.Body>
             <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="504,501.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_16">
               <sap:WorkflowViewStateService.ViewState>
@@ -449,9 +451,6 @@
               </If>
             </Sequence>
           </ui:InterruptibleWhile.Body>
-          <ui:InterruptibleWhile.Condition>
-            <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="counter &lt; 10" />
-          </ui:InterruptibleWhile.Condition>
         </ui:InterruptibleWhile>
         <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="506,170.66666666666666" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
           <ui:MultipleAssign.AssignOperations>
@@ -488,7 +487,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Outlook]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,424" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[&quot;CHRISTUS Health Monthly Deck: &quot;+monthyear]" To="akshayakumar@deloitte.com" UseDocumentAsBody="False">
+              <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Outlook]" Cc="[CcEmails]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,424" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[&quot;CHRISTUS Health Monthly Deck: &quot;+monthyear]" To="[ToEmails]" UseDocumentAsBody="False">
                 <umab:SendMailX.Files>
                   <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                 </umab:SendMailX.Files>
