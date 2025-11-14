@@ -140,7 +140,7 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="MonthlyDeck" sap:VirtualizedContainerService.HintSize="1214.6666666666665,2350.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="MonthlyDeck" sap:VirtualizedContainerService.HintSize="940.6666666666666,2350.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="finalDateString" />
       <Variable x:TypeArguments="s:DateTime" Name="tempDate" />
