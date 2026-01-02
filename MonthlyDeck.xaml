@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="MonthlyDeck" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="MonthlyDeck" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="CcEmails" Type="InArgument(x:String)" />
     <x:Property Name="ToEmails" Type="InArgument(x:String)" />
@@ -72,6 +72,14 @@
       <x:String>UiPath.Mail.Activities.Utils</x:String>
       <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
       <x:String>System.Security</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>Microsoft.Graph</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -138,9 +146,18 @@
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="MonthlyDeck" sap:VirtualizedContainerService.HintSize="940.6666666666666,2350.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="MonthlyDeck" sap:VirtualizedContainerService.HintSize="940.6666666666666,2062" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="finalDateString" />
       <Variable x:TypeArguments="s:DateTime" Name="tempDate" />
@@ -157,7 +174,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="MonthlyDeck" sap:VirtualizedContainerService.HintSize="574,2328" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="MonthlyDeck" sap:VirtualizedContainerService.HintSize="604,2039.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="mailfile01" />
         <Variable x:TypeArguments="x:String" Name="newfilepath01" />
@@ -175,7 +192,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:MultipleAssign DisplayName="Multiple Assign (Assign and Calculate Month/Year)" sap:VirtualizedContainerService.HintSize="540,302.6666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign DisplayName="Multiple Assign (Assign and Calculate Month/Year)" sap:VirtualizedContainerService.HintSize="570,302.6666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -229,7 +246,7 @@
           </scg:List>
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
-      <ui:PowerPointApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" AutoSave="False" DisplayName="Use PowerPoint Presentation (Update and Save ppt POD-01)" sap:VirtualizedContainerService.HintSize="540,57.333333333333336" sap2010:WorkflowViewState.IdRef="PowerPointApplicationScope_1" PresentationPath="Monthly_updates_CHRISTUS POD-1 Template.pptx" SensitivityOperation="None">
+      <ui:PowerPointApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" AutoSave="False" DisplayName="Use PowerPoint Presentation (Update and Save ppt POD-01)" sap:VirtualizedContainerService.HintSize="570,57.333333333333336" sap2010:WorkflowViewState.IdRef="PowerPointApplicationScope_3" PresentationPath="Monthly_updates_CHRISTUS POD-1 Template.pptx" SensitivityOperation="None">
         <ui:PowerPointApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:IPresentationQuickHandle">
             <ActivityAction.Argument>
@@ -286,7 +303,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:PowerPointApplicationScope>
-      <ui:PowerPointApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" AutoSave="False" DisplayName="Use PowerPoint Presentation (Update and Save ppt POD-02)" sap:VirtualizedContainerService.HintSize="540,57.333333333333336" sap2010:WorkflowViewState.IdRef="PowerPointApplicationScope_2" PresentationPath="Monthly_updates_CHRISTUS POD-2 Template.pptx" SensitivityOperation="None">
+      <ui:PowerPointApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" AutoSave="False" DisplayName="Use PowerPoint Presentation (Update and Save ppt POD-02)" sap:VirtualizedContainerService.HintSize="570,57.333333333333336" sap2010:WorkflowViewState.IdRef="PowerPointApplicationScope_4" PresentationPath="Monthly_updates_CHRISTUS POD-2 Template.pptx" SensitivityOperation="None">
         <ui:PowerPointApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:IPresentationQuickHandle">
             <ActivityAction.Argument>
@@ -343,7 +360,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:PowerPointApplicationScope>
-      <Sequence DisplayName="Sequence (Move to Archive POD01 &amp; POD02)" sap:VirtualizedContainerService.HintSize="540,57.333333333333336" sap2010:WorkflowViewState.IdRef="Sequence_14">
+      <Sequence DisplayName="Sequence (Move to Archive POD01 &amp; POD02)" sap:VirtualizedContainerService.HintSize="570,57.333333333333336" sap2010:WorkflowViewState.IdRef="Sequence_25">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -375,14 +392,14 @@
         <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[&quot;C:\Users\&quot;+user+&quot;\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Monthly and Value Adds\Monthly Updates\Archive&quot;]" DisplayName="Move File (POD-01 Archive)" sap:VirtualizedContainerService.HintSize="477.3333333333333,196.66666666666666" sap2010:WorkflowViewState.IdRef="MoveFile_1" Path="[&quot;C:\Users\&quot;+user+&quot;\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Monthly and Value Adds\Monthly Updates\&quot;+Archive01]" />
         <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[&quot;C:\Users\&quot;+user+&quot;\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Monthly and Value Adds\Monthly Updates\Archive&quot;]" DisplayName="Move File (POD-02 Archive)" sap:VirtualizedContainerService.HintSize="477.3333333333333,187.33333333333334" sap2010:WorkflowViewState.IdRef="MoveFile_2" Path="[&quot;C:\Users\&quot;+user+&quot;\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Monthly and Value Adds\Monthly Updates\&quot;+Archive02]" />
       </Sequence>
-      <Sequence DisplayName="Sequence (Calculate working day today+10 days)" sap:VirtualizedContainerService.HintSize="540,1076" sap2010:WorkflowViewState.IdRef="Sequence_15">
+      <Sequence DisplayName="Sequence (Calculate working day today+10 days)" sap:VirtualizedContainerService.HintSize="570,57.333333333333336" sap2010:WorkflowViewState.IdRef="Sequence_15">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="506,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
+        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="477.3333333333333,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
           <ui:MultipleAssign.AssignOperations>
             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_22">
@@ -404,15 +421,15 @@
             </scg:List>
           </ui:MultipleAssign.AssignOperations>
         </ui:MultipleAssign>
-        <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[counter &lt; 10]" DisplayName="While" sap:VirtualizedContainerService.HintSize="506,633.3333333333334" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+        <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[counter &lt; 10]" DisplayName="While" sap:VirtualizedContainerService.HintSize="477.3333333333333,357.3333333333333" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
           <ui:InterruptibleWhile.Body>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="504,501.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,225.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_16">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="470,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign sap:VirtualizedContainerService.HintSize="434,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
                 <Assign.To>
                   <OutArgument x:TypeArguments="s:DateTime">[tempDate]</OutArgument>
                 </Assign.To>
@@ -420,7 +437,13 @@
                   <InArgument x:TypeArguments="s:DateTime">[tempDate.AddDays(1)]</InArgument>
                 </Assign.Value>
               </Assign>
-              <If Condition="[tempDate.DayOfWeek &lt;&gt; DayOfWeek.Saturday And tempDate.DayOfWeek &lt;&gt; DayOfWeek.Sunday]" sap:VirtualizedContainerService.HintSize="470,324" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[tempDate.DayOfWeek &lt;&gt; System.DayOfWeek.Saturday AndAlso tempDate.DayOfWeek &lt;&gt; System.DayOfWeek.Sunday]" sap:VirtualizedContainerService.HintSize="470,301.3333333333333" sap2010:WorkflowViewState.IdRef="If_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
                   <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,168" sap2010:WorkflowViewState.IdRef="Sequence_17">
                     <sap:WorkflowViewStateService.ViewState>
@@ -452,7 +475,7 @@
             </Sequence>
           </ui:InterruptibleWhile.Body>
         </ui:InterruptibleWhile>
-        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="506,170.66666666666666" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
+        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="477.3333333333333,170.66666666666666" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
           <ui:MultipleAssign.AssignOperations>
             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_24">
@@ -475,7 +498,40 @@
           </ui:MultipleAssign.AssignOperations>
         </ui:MultipleAssign>
       </Sequence>
-      <umab:OutlookApplicationCard Account="{x:Null}" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App (Send email reminder to team)" sap:VirtualizedContainerService.HintSize="540,694.6666666666666" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="570,730" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+        <ueab:ExcelProcessScopeX.Body>
+          <ActivityAction x:TypeArguments="ui:IExcelProcess">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="536,610.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_20">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="502,550.6666666666666" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="ReminderEmailDate.xlsx">
+                <ueab:ExcelApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,247.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:WriteCellX Cell="[Excel.SelectedSheet.Cell(&quot;A1&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,187.33333333333334" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[finalDateString]" />
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelApplicationCard.Body>
+              </ueab:ExcelApplicationCard>
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelProcessScopeX.Body>
+      </ueab:ExcelProcessScopeX>
+      <umab:OutlookApplicationCard Account="{x:Null}" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App (Send email reminder to team)" sap:VirtualizedContainerService.HintSize="570,694.6666666666666" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
         <umab:OutlookApplicationCard.Body>
           <ActivityAction x:TypeArguments="um:IMailQuickHandle">
             <ActivityAction.Argument>
