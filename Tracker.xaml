@@ -140,7 +140,7 @@
       <AssemblyReference>UiPath.Presentations.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Tracker" sap:VirtualizedContainerService.HintSize="1214.6666666666665,1050.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Tracker" sap:VirtualizedContainerService.HintSize="940.6666666666666,1050.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="nextMondaystr" />
       <Variable x:TypeArguments="x:String" Name="account" />
