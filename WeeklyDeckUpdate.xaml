@@ -72,6 +72,8 @@
       <x:String>UiPath.Mail.Activities.Utils</x:String>
       <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
       <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>Microsoft.Office.Interop.PowerPoint</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -150,9 +152,10 @@
       <AssemblyReference>Microsoft.Graph</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Office.Interop.PowerPoint</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WeeklyDeckUpdate" sap:VirtualizedContainerService.HintSize="1214.6666666666665,3176.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="WeeklyDeckUpdate" sap:VirtualizedContainerService.HintSize="940.6666666666666,4242" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="lastFriday" />
       <Variable x:TypeArguments="x:String" Name="mailFile" />
@@ -173,7 +176,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Assign and Calculate Date" sap:VirtualizedContainerService.HintSize="545.3333333333334,737.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <Sequence DisplayName="Assign and Calculate Date" sap:VirtualizedContainerService.HintSize="604,737.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -405,7 +408,7 @@
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
     </Sequence>
-    <ui:PowerPointApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" AutoSave="False" DisplayName="Use PowerPoint Presentation (Update and Save ppt)" sap:VirtualizedContainerService.HintSize="545.3333333333334,1300.6666666666667" sap2010:WorkflowViewState.IdRef="PowerPointApplicationScope_2" PresentationPath="WeeklyDeck_Template.pptx" SensitivityOperation="None">
+    <ui:PowerPointApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" AutoSave="False" DisplayName="Use PowerPoint Presentation (Update and Save ppt)" sap:VirtualizedContainerService.HintSize="604,1300.6666666666667" sap2010:WorkflowViewState.IdRef="PowerPointApplicationScope_2" PresentationPath="WeeklyDeck_Template.pptx" SensitivityOperation="None">
       <ui:PowerPointApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:IPresentationQuickHandle">
           <ActivityAction.Argument>
@@ -454,8 +457,8 @@
         </ActivityAction>
       </ui:PowerPointApplicationScope.Body>
     </ui:PowerPointApplicationScope>
-    <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[&quot;C:\Users\&quot;+user+&quot;\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Project Management\Status Reports&quot;]" DisplayName="Copy File to Status Report Folder" sap:VirtualizedContainerService.HintSize="545.3333333333334,224.66666666666666" sap2010:WorkflowViewState.IdRef="CopyFile_1" Path="[newfilePath]" />
-    <umab:OutlookApplicationCard Account="{x:Null}" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App (Send Email to Update the PPT)" sap:VirtualizedContainerService.HintSize="545.3333333333334,704" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_2">
+    <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[&quot;C:\Users\&quot;+user+&quot;\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Project Management\Status Reports&quot;]" DisplayName="Copy File to Status Report Folder" sap:VirtualizedContainerService.HintSize="604,224.66666666666666" sap2010:WorkflowViewState.IdRef="CopyFile_1" Path="[newfilePath]" />
+    <umab:OutlookApplicationCard Account="{x:Null}" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App (Send Email to Update the PPT)" sap:VirtualizedContainerService.HintSize="604,704" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_2">
       <umab:OutlookApplicationCard.Body>
         <ActivityAction x:TypeArguments="um:IMailQuickHandle">
           <ActivityAction.Argument>
@@ -488,6 +491,47 @@
         </ActivityAction>
       </umab:OutlookApplicationCard.Body>
     </umab:OutlookApplicationCard>
-    <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[&quot;C:\Users\&quot;+user+&quot;\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Project Management\Status Reports\New Pod Archived Status Reports from 11_12_2024&quot;]" DisplayName="Move File (Previous Week PPT to Archive)" sap:VirtualizedContainerService.HintSize="545.3333333333334,187.33333333333334" sap2010:WorkflowViewState.IdRef="MoveFile_3" Path="[&quot;C:\Users\&quot;+user+&quot;\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Project Management\Status Reports\Weekly CHRISTUS Health_Deloitte Build Team Status Report_&quot;+lastFridayStr+&quot;.pptx&quot;]" />
+    <Sequence DisplayName="Sequence (Workflow to Replace Slide02)" sap:VirtualizedContainerService.HintSize="604,1065.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_23">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:PowerPointApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use PowerPoint Presentation" sap:VirtualizedContainerService.HintSize="570,973.3333333333334" sap2010:WorkflowViewState.IdRef="PowerPointApplicationScope_4" PresentationPath="[&quot;C:\Users\&quot;+user+&quot;\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Project Management\Status Reports\Weekly CHRISTUS Health_Deloitte Build Team Status Report_&quot;+compactDate+&quot;.pptx&quot;]" SensitivityOperation="None">
+        <ui:PowerPointApplicationScope.Body>
+          <ActivityAction x:TypeArguments="ui:IPresentationQuickHandle">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:IPresentationQuickHandle" Name="PowerPoint" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="536,692" sap2010:WorkflowViewState.IdRef="Sequence_25">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:PowerPointApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use PowerPoint Presentation" sap:VirtualizedContainerService.HintSize="502,632" sap2010:WorkflowViewState.IdRef="PowerPointApplicationScope_5" PresentationPath="[&quot;C:\Users\&quot;+user+&quot;\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Project Management\Status Reports\Weekly CHRISTUS Health_Deloitte Build Team Status Report_&quot;+lastFridayStr+&quot;.pptx&quot;]" SensitivityOperation="None">
+                <ui:PowerPointApplicationScope.Body>
+                  <ActivityAction x:TypeArguments="ui:IPresentationQuickHandle">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:IPresentationQuickHandle" Name="PowerPoint01" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,350.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:CopyPasteSlide DestinationPresentation="[PowerPoint]" DisplayName="Copy Paste Slide" sap:VirtualizedContainerService.HintSize="434,290.6666666666667" sap2010:WorkflowViewState.IdRef="CopyPasteSlide_1" Move="False" SlideToCopy="2" SourcePresentation="[PowerPoint01]" WhereToInsert="2" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:PowerPointApplicationScope.Body>
+              </ui:PowerPointApplicationScope>
+            </Sequence>
+          </ActivityAction>
+        </ui:PowerPointApplicationScope.Body>
+      </ui:PowerPointApplicationScope>
+    </Sequence>
+    <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[&quot;C:\Users\&quot;+user+&quot;\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Project Management\Status Reports\New Pod Archived Status Reports from 11_12_2024&quot;]" DisplayName="Move File (Previous Week PPT to Archive)" sap:VirtualizedContainerService.HintSize="604,187.33333333333334" sap2010:WorkflowViewState.IdRef="MoveFile_3" Path="[&quot;C:\Users\&quot;+user+&quot;\Deloitte (O365D)\CHRISTUS Health Pod Engagement - Documents\General\Project Management\Status Reports\Weekly CHRISTUS Health_Deloitte Build Team Status Report_&quot;+lastFridayStr+&quot;.pptx&quot;]" />
   </Sequence>
 </Activity>
