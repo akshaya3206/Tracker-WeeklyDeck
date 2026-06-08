@@ -1,5 +1,6 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
+    <x:Property Name="signature" Type="InArgument(x:String)" />
     <x:Property Name="user" Type="InArgument(x:String)" />
     <x:Property Name="CcEmails" Type="InArgument(x:String)" />
     <x:Property Name="ToEmails" Type="InArgument(x:String)" />
@@ -127,7 +128,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="940.6666666666666,2377.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="940.6666666666666,2494.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="readSucess" />
       <Variable x:TypeArguments="sd:DataTable" Name="CC_Emaildt" />
@@ -145,6 +146,14 @@
       </Assign.To>
       <Assign.Value>
         <InArgument x:TypeArguments="x:String">akshayakumar</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign DisplayName="Assign Email Signature" sap:VirtualizedContainerService.HintSize="452,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[signature]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">Akshaya kumar</InArgument>
       </Assign.Value>
     </Assign>
     <Sequence DisplayName="Read Mail ID from Excel" sap:VirtualizedContainerService.HintSize="452,57.333333333333336" sap2010:WorkflowViewState.IdRef="Sequence_12">
@@ -248,6 +257,7 @@
         </sap:WorkflowViewStateService.ViewState>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Tracker - Invoke Workflow File (Tracker.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Tracker.xaml">
           <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="signature">[signature]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="CcEmails">[CcEmails]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="ToEmails">[ToEmails]</InArgument>
           </ui:InvokeWorkflowFile.Arguments>
@@ -261,6 +271,7 @@
         </sap:WorkflowViewStateService.ViewState>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="WeeklyDeckUpdate - Invoke Workflow File (WeeklyDeckUpdate.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="WeeklyDeckUpdate.xaml">
           <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="signature">[signature]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="CcEmails">[CcEmails]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="ToEmails">[ToEmails]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="user">[user]</InArgument>
@@ -275,12 +286,14 @@
         </sap:WorkflowViewStateService.ViewState>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Tracker - Invoke Workflow File (Tracker.xaml)" sap:VirtualizedContainerService.HintSize="416,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Tracker.xaml">
           <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="signature">[signature]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="CcEmails">[CcEmails]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="ToEmails">[ToEmails]</InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="WeeklyDeckUpdate - Invoke Workflow File (WeeklyDeckUpdate.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="WeeklyDeckUpdate.xaml">
           <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="signature">[signature]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="CcEmails">[CcEmails]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="ToEmails">[ToEmails]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="user">[user]</InArgument>
@@ -295,6 +308,7 @@
         </sap:WorkflowViewStateService.ViewState>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="MonthlyDeck - Invoke Workflow File (MonthlyDeck.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="MonthlyDeck.xaml">
           <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="signature">[signature]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="CcEmails">[CcEmails]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="ToEmails">[ToEmails]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="user">[user]</InArgument>
@@ -309,6 +323,7 @@
         </sap:WorkflowViewStateService.ViewState>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="MonthlyDeckReminder - Invoke Workflow File (MonthlyDeckReminder.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="MonthlyDeckReminder.xaml">
           <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="signature">[signature]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="CcEmails">[CcEmails]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="ToEmails">[ToEmails]</InArgument>
           </ui:InvokeWorkflowFile.Arguments>
